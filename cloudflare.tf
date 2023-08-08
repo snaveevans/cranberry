@@ -17,8 +17,8 @@ resource "cloudflare_pages_project" "cranberry" {
   production_branch = "main"
 
   build_config {
-    build_command       = "npx @cloudflare/next-on-pages@1"
-    destination_dir     = ".vercel/output/static"
+    build_command   = "npx @cloudflare/next-on-pages@1"
+    destination_dir = ".vercel/output/static"
   }
 
   source {
@@ -37,7 +37,7 @@ resource "cloudflare_pages_project" "cranberry" {
   deployment_configs {
     preview {
       environment_variables = {
-        ENVIRONMENT = "preview-2"
+        ENVIRONMENT  = "preview-2"
         NODE_VERSION = "18"
       }
       compatibility_date  = "2023-03-14"

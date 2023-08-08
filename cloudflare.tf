@@ -7,12 +7,12 @@ terraform {
   }
 }
 
-variable "cloudflare_account_id" {
+variable "CLOUDFLARE_ACCOUNT_ID" {
   type = string
 }
 
 resource "cloudflare_pages_project" "cranberry" {
-  account_id        = var.cloudflare_account_id
+  account_id        = var.CLOUDFLARE_ACCOUNT_ID
   name              = "cranberry"
   production_branch = "main"
 
